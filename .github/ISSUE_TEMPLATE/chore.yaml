@@ -1,0 +1,39 @@
+name: Chore
+description: Neither a feature nor a bug
+labels: ['enhancement']
+assignees:
+  - ArgoN1ck
+body:
+  - type: input
+    id: task-type
+    attributes:
+      label: What kind of task is this?
+      placeholder: Change values or modify logic
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What and where will we be changing?
+      placeholder: |
+        **_For example:_**
+        Need to change the condition in the function
+        ```javascript
+        if(servicePayment === 1) {
+          return
+        }
+        ```
+        to
+        ```javascript
+        if(!servicePayment && !servicePaymentValue){
+          window.location.href = homePageUrl || userProfilePageUrl
+          return null
+        }
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: ref
+    attributes:
+      label: Provide a reference
+      placeholder: Why was this decision made? Link to another task, PR, in general – context is needed

@@ -1,0 +1,26 @@
+{
+  "name": "devops",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "__________dev infra__________": "__________dev infra__________",
+    "docker:dev:restart": "npm run docker:dev:down && npm run docker:dev:up",
+    "docker:dev:down": "set -a && . ./.env && set +a && ./docker/dev/docker-compose-down.sh",
+    "docker:dev:up": "set -a && . ./.env && set +a && ./docker/dev/docker-compose-up.sh",
+    "docker:dev:clean-restart": "npm run docker:dev:clean-down && npm run docker:dev:up",
+    "docker:dev:clean-down": "set -a && . ./.env && set +a && ./docker/dev/docker-compose-clean-down.sh",
+    "__________prod infra__________": "__________prod infra__________",
+    "docker:prod:restart:local": "npm run docker:prod:down && npm run docker:prod:up:local",
+    "docker:prod:down": "./docker/prod/docker-compose-down.sh",
+    "docker:prod:up:local": "export TAG_VERSION=local && export NO_PUSH_DOCKER_IMAGES=true && export NO_PULL_ON_BUILD_BASE_IMAGE=true && set -a && . ./.env && set +a && npm run docker:prod:build-all-sources && npm run docker:prod:build-server-base-image && npm run docker:prod:build-server && npm run docker:prod:up",
+    "docker:prod:up": "./docker/prod/docker-compose-up.sh",
+    "docker:prod:build-server": "./docker/prod/docker-compose-build-server.sh",
+    "docker:prod:build-server-base-image": "./docker/prod/docker-compose-build-base-image.sh",
+    "docker:prod:build-all-sources": "cd ../ && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

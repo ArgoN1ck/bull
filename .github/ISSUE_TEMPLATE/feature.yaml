@@ -1,0 +1,39 @@
+name: Feature
+description: Breaking backward compatibility change
+labels: ['enhancement']
+assignees:
+  - ArgoN1ck
+body:
+  - type: input
+    id: motivation
+    attributes:
+      label: What is the request for this feature related to?
+      placeholder: In the case of @Injectable, we should also be able to pass events through the provider via event bus
+    validations:
+      required: true
+  - type: textarea
+    id: poc
+    attributes:
+      label: Describe how you envision it
+      placeholder: |
+        For example:
+        ```typescript
+        @Injectable({
+          provider: "IntlProvider"
+        })
+
+        export class IntlService {
+          getIntl(object){
+            return object.string
+          }
+        }
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Attach implementation examples (optional)
+      placeholder: Simply provide a link to a repo, article, gist, any other source where you got the idea
+    validations:
+      required: false

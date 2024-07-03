@@ -1,0 +1,46 @@
+name: Bug
+description: Something somewhere went wrong
+labels: ['bug']
+assignees:
+  - ArgoN1ck
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: 'Steps to reproduce the bug:'
+      placeholder: |
+        1. Go to a certain place **package/name/src/main.js:561**
+        2. Execute a command or do something
+        3. Observe something specific
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: 'Clearly and concisely describe the expected behavior (without "I thought" or "well, it''s kinda obvious... right?").'
+    validations:
+      required: true
+  - type: textarea
+    id: assets
+    attributes:
+      label: Assets
+      description: Attach screenshots if the issue is related to the visual part and collecting logs is not acceptable. Attach logs if the issue is related to the system part and screenshots won't help in analysis and problem-solving.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment Data
+      placeholder: |
+        - OS and version [e.g., iOS@14.7, Android@6.7.3, Windows@7.1]
+        - Browser and version [e.g., Chrome@64, Safari@13]
+    validations:
+      required: true
