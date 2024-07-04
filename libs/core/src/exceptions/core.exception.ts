@@ -14,11 +14,7 @@ export class CoreException extends Error implements ICoreException {
   }
 }
 
-export class ValidationException extends CoreException {
-  constructor(description: object) {
-    super(400, 'BadRequestException', description);
-  }
-}
+export class ValidationException extends CoreException {}
 export class UnauthorizedException extends CoreException {}
 export class ForbiddenException extends CoreException {}
 export class NotFoundException extends CoreException {}

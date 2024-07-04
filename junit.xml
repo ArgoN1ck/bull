@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="0" errors="0" time="1.803">
+  <testsuite name="User" errors="0" failures="0" skipped="0" timestamp="2024-07-04T08:16:40" time="1.274" tests="6">
+    <testcase classname="User /api/users/ POST SUCCESS" name="User /api/users/ POST SUCCESS" time="0.068">
+    </testcase>
+    <testcase classname="User /api/users/ POST FAILURE" name="User /api/users/ POST FAILURE" time="0.086">
+    </testcase>
+    <testcase classname="User /api/users/ /get-by-id/{id} SUCCESS" name="User /api/users/ /get-by-id/{id} SUCCESS" time="0.033">
+    </testcase>
+    <testcase classname="User /api/users/ /get-by-id/{id} FAILURE" name="User /api/users/ /get-by-id/{id} FAILURE" time="0.008">
+    </testcase>
+    <testcase classname="User /api/users/ /check-email/{email} SUCCESS" name="User /api/users/ /check-email/{email} SUCCESS" time="0.009">
+    </testcase>
+    <testcase classname="User /api/users/ /check-email/{email} FAILURE" name="User /api/users/ /check-email/{email} FAILURE" time="0.031">
+    </testcase>
+  </testsuite>
+  <testsuite name="HashingService" errors="0" failures="0" skipped="0" timestamp="2024-07-04T08:16:41" time="0.485" tests="1">
+    <testcase classname="HashingService Should hash the provided string" name="HashingService Should hash the provided string" time="0.01">
+    </testcase>
+  </testsuite>
+</testsuites>

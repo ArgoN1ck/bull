@@ -17,7 +17,9 @@
     "docker:prod:up": "./docker/prod/docker-compose-up.sh",
     "docker:prod:build-server": "./docker/prod/docker-compose-build-server.sh",
     "docker:prod:build-server-base-image": "./docker/prod/docker-compose-build-base-image.sh",
-    "docker:prod:build-all-sources": "cd ../ && npm run build"
+    "docker:prod:build-all-sources": "cd ../ && npm run build",
+    "__________test__________": "__________test__________",
+    "test": "./tests/test.sh"
   },
   "author": "",
   "license": "ISC",
