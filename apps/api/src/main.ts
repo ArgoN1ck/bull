@@ -30,6 +30,8 @@ async function bootstrap() {
         transform: true,
         exceptionFactory(errors) {
           throw new ValidationException(
+            400,
+            'ValidationException',
             errors.map(({ property, constraints }) => ({
               code: property,
               description: constraints,
