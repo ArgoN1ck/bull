@@ -1,6 +1,6 @@
 import { CoreException } from '../exceptions/core.exception';
 
-export class Result<T, E extends CoreException = any> {
+export class Result<T> {
   public get isFailure() {
     return !this.isSuccess;
   }
@@ -8,7 +8,7 @@ export class Result<T, E extends CoreException = any> {
   private constructor(
     public data: T,
     public isSuccess: boolean,
-    public error: E | null
+    public error: CoreException | null
   ) {}
 
   public static Success<T>(data: T) {
